@@ -44,7 +44,7 @@ uv sync --extra dev              # runtime + development/test dependencies
 # Configure API key and model
 cp .env.example .env
 # Edit .env and set OPENAI_API_KEY or ANTHROPIC_API_KEY
-# Optional: set OPENAI_BASE_URL for another OpenAI-compatible API, such as DeepSeek
+# Optional: set OPENAI_BASE_URL for any OpenAI-compatible API, such as DeepSeek, OrcaRouter, etc.
 # Optional: set ASTERWYND_PROVIDER (openai / anthropic) and ASTERWYND_MODEL as defaults
 
 # Run CLI (OpenAI by default, using ASTERWYND_MODEL from .env)
@@ -469,5 +469,9 @@ Python 3.11+ / asyncio / FastAPI / httpx / typer / tiktoken (optional)
 - `docs/coding-agent-roadmap.md`: Coding Agent roadmap
 - `docs/benchmark-plan.md`: benchmark design for the local runner, SWE-bench Docker harness, and Claw-SWE-Bench comparison path
 - `CLAW-SWE-BENCH.md`: Claw-SWE-Bench integration and running guide
+
+## Acknowledgements
+
+- [OrcaRouter](https://www.orcarouter.ai/ref/ref_4c1cf5a5bb71174f474d) — a multi-model gateway with free models such as DeepSeek and Qwen. Set `OPENAI_BASE_URL` to `https://api.orcarouter.ai/v1` to use it with asterwynd.
 
 > Chinese source: [README.md](./README.md)

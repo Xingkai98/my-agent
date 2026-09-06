@@ -44,7 +44,7 @@ uv sync --extra dev              # 运行时 + 开发/测试依赖
 # 配置 API Key 和模型
 cp .env.example .env
 # 编辑 .env，填入 OPENAI_API_KEY 或 ANTHROPIC_API_KEY
-# 可选：改 OPENAI_BASE_URL 指向其他 OpenAI 兼容 API（如 DeepSeek）
+# 可选：改 OPENAI_BASE_URL 指向任意 OpenAI 兼容 API（如 DeepSeek、OrcaRouter 等）
 # 可选：设置 ASTERWYND_PROVIDER（openai / anthropic）和 ASTERWYND_MODEL 作为默认值
 
 # 运行 CLI（OpenAI，默认；用 .env 配置的 ASTERWYND_MODEL）
@@ -468,3 +468,7 @@ Python 3.11+ / asyncio / FastAPI / httpx / typer / tiktoken（可选）
 - `docs/coding-agent-roadmap.md` — 编码 Agent 路线图
 - `docs/benchmark-plan.md` — benchmark 设计（本地 runner、SWE-bench Docker harness、Claw-SWE-Bench 对比入口）
 - `CLAW-SWE-BENCH.md` — Claw-SWE-Bench 集成和运行指南
+
+## 致谢
+
+- [OrcaRouter](https://www.orcarouter.ai/ref/ref_4c1cf5a5bb71174f474d) — 多模型网关（含 DeepSeek、千问 等免费模型）。把 `OPENAI_BASE_URL` 设为 `https://api.orcarouter.ai/v1` 即可通过 asterwynd 使用。
